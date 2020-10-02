@@ -1,6 +1,10 @@
 module.exports = templateData => {
     console.log(templateData);
 
+    //destructure projects and about data from templateData based on their property key names
+    const { projects, about, ...header } = templateData;
+    console.log(projects, about, header);
+
     return `
     <!DOCTYPE html>
     <html lang="en">
@@ -19,5 +23,7 @@ module.exports = templateData => {
     </html>
     `;
 };
+
+
 
 // module.exports = generatePage;
